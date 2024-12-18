@@ -61,6 +61,19 @@ export default function Home() {
       >
         <Text>Go to Webview</Text>
       </Link>
+
+      <Link
+        style={{
+          width: "100%",
+          backgroundColor: "pink",
+          padding: 10,
+          marginBottom: 10,
+          marginTop: 10,
+        }}
+        href="/tab"
+      >
+        <Text>Go to tab</Text>
+      </Link>
     </View>
   );
 }
