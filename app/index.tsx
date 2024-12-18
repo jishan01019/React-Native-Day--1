@@ -74,6 +74,19 @@ export default function Home() {
       >
         <Text>Go to tab</Text>
       </Link>
+
+      <Link
+        style={{
+          width: "100%",
+          backgroundColor: "pink",
+          padding: 10,
+          marginBottom: 10,
+          marginTop: 10,
+        }}
+        href="/drawer/(tab)"
+      >
+        <Text>Go to drawer</Text>
+      </Link>
     </View>
   );
 }
