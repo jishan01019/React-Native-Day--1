@@ -16,7 +16,7 @@ export default function DrawerLayout() {
         }}
       >
         <Drawer.Screen
-          name="(tab)"
+          name="tab"
           options={{
             drawerLabel: "Drawer Home",
             title: "Toolbar Home",
@@ -61,6 +61,7 @@ export default function DrawerLayout() {
           options={{
             drawerLabel: "Drawer Share",
             title: "Toolbar Share",
+
             drawerItemStyle: {
               backgroundColor: "lightgray", // Light gray background
               borderBottomWidth: 1, // Bottom border
@@ -68,6 +69,7 @@ export default function DrawerLayout() {
               borderRadius: 0,
               marginTop: 10,
             },
+
             drawerLabelStyle: {
               color: "black", // Text color
               fontSize: 16, // Optional: Adjust font size

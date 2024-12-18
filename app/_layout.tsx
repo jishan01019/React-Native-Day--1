@@ -86,7 +86,7 @@ export default function RootLayout() {
         />
 
         <Stack.Screen
-          name="tab"
+          name="tab/home"
           options={{
             headerShown: false,
           }}

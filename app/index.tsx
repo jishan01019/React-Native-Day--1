@@ -83,7 +83,7 @@ export default function Home() {
           marginBottom: 10,
           marginTop: 10,
         }}
-        href="/drawer/(tab)"
+        href="/drawer/tab/home"
       >
         <Text>Go to drawer</Text>
       </Link>

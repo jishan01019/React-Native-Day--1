@@ -11,7 +11,7 @@ export default function DrawerPrivacy() {
         alignItems: "center",
       }}
     >
-      <Text>DrawerHome</Text>
+      <Text>Drawer Privacy</Text>
     </View>
   );
 }
