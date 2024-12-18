@@ -71,6 +71,19 @@ export default function RootLayout() {
             },
           }}
         />
+
+        <Stack.Screen
+          name="webview/index"
+          options={{
+            title: "Webview",
+            headerStyle: { backgroundColor: "#f4511e" },
+            headerTintColor: "#fff",
+            headerTitleStyle: {
+              fontWeight: "bold",
+            },
+            headerShown: false,
+          }}
+        />
       </Stack>
 
       <StatusBar style="auto" backgroundColor="green" />
