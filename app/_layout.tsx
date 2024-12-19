@@ -11,6 +11,8 @@ import { useEffect } from "react";
 import "react-native-reanimated";
 
 import { useColorScheme } from "@/hooks/useColorScheme";
+import { Provider } from "react-redux";
+import store from "@/redux/store";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -33,86 +35,100 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="+not-found" />
+      <Provider store={store}>
+        <Stack>
+          <Stack.Screen name="+not-found" />
 
-        <Stack.Screen
-          name="index"
-          options={{
-            title: "My home",
-            headerStyle: { backgroundColor: "#f4511e" },
-            headerTintColor: "#fff",
-            headerTitleStyle: {
-              fontWeight: "bold",
-            },
-          }}
-        />
+          <Stack.Screen
+            name="index"
+            options={{
+              title: "My home",
+              headerStyle: { backgroundColor: "#f4511e" },
+              headerTintColor: "#fff",
+              headerTitleStyle: {
+                fontWeight: "bold",
+              },
+            }}
+          />
 
-        <Stack.Screen
-          name="profile/index"
-          options={{
-            title: "Profile",
-            headerStyle: { backgroundColor: "#f4511e" },
-            headerTintColor: "#fff",
-            headerTitleStyle: {
-              fontWeight: "bold",
-            },
-          }}
-        />
+          <Stack.Screen
+            name="profile/index"
+            options={{
+              title: "Profile",
+              headerStyle: { backgroundColor: "#f4511e" },
+              headerTintColor: "#fff",
+              headerTitleStyle: {
+                fontWeight: "bold",
+              },
+            }}
+          />
 
-        <Stack.Screen
-          name="post-item/index"
-          options={{
-            title: "Post",
-            headerStyle: { backgroundColor: "#f4511e" },
-            headerTintColor: "#fff",
-            headerTitleStyle: {
-              fontWeight: "bold",
-            },
-          }}
-        />
+          <Stack.Screen
+            name="post-item/index"
+            options={{
+              title: "Post",
+              headerStyle: { backgroundColor: "#f4511e" },
+              headerTintColor: "#fff",
+              headerTitleStyle: {
+                fontWeight: "bold",
+              },
+            }}
+          />
 
-        <Stack.Screen
-          name="webview/index"
-          options={{
-            title: "Webview",
-            headerStyle: { backgroundColor: "#f4511e" },
-            headerTintColor: "#fff",
-            headerTitleStyle: {
-              fontWeight: "bold",
-            },
-            headerShown: false,
-          }}
-        />
+          <Stack.Screen
+            name="webview/index"
+            options={{
+              title: "Webview",
+              headerStyle: { backgroundColor: "#f4511e" },
+              headerTintColor: "#fff",
+              headerTitleStyle: {
+                fontWeight: "bold",
+              },
+              headerShown: false,
+            }}
+          />
 
-        <Stack.Screen
-          name="local-storage/index"
-          options={{
-            title: "Local Storage",
-            headerStyle: { backgroundColor: "#f4511e" },
-            headerTintColor: "#fff",
-            headerTitleStyle: {
-              fontWeight: "bold",
-            },
-          }}
-        />
+          <Stack.Screen
+            name="local-storage/index"
+            options={{
+              title: "Local Storage",
+              headerStyle: { backgroundColor: "#f4511e" },
+              headerTintColor: "#fff",
+              headerTitleStyle: {
+                fontWeight: "bold",
+              },
+            }}
+          />
 
-        <Stack.Screen
-          name="tab/home"
-          options={{
-            headerShown: false,
-          }}
-        />
+          <Stack.Screen
+            name="redux-page/index"
+            options={{
+              title: "Redux Storage",
+              headerStyle: { backgroundColor: "#f4511e" },
+              headerTintColor: "#fff",
+              headerTitleStyle: {
+                fontWeight: "bold",
+              },
+            }}
+          />
 
-        <Stack.Screen
-          name="drawer"
-          options={{
-            headerShown: false,
-          }}
-        />
-      </Stack>
+          <Stack.Screen
+            name="tab/home"
+            options={{
+              headerShown: false,
+            }}
+          />
 
-      <StatusBar style="auto" backgroundColor="green" />
+          <Stack.Screen
+            name="drawer"
+            options={{
+              headerShown: false,
+            }}
+          />
+        </Stack>
+
+        <StatusBar style="auto" backgroundColor="green" />
+      </Provider>
     </ThemeProvider>
   );
 }
