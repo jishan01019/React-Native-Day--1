@@ -86,6 +86,18 @@ export default function RootLayout() {
         />
 
         <Stack.Screen
+          name="local-storage/index"
+          options={{
+            title: "Local Storage",
+            headerStyle: { backgroundColor: "#f4511e" },
+            headerTintColor: "#fff",
+            headerTitleStyle: {
+              fontWeight: "bold",
+            },
+          }}
+        />
+
+        <Stack.Screen
           name="tab/home"
           options={{
             headerShown: false,

@@ -87,6 +87,19 @@ export default function Home() {
       >
         <Text>Go to drawer</Text>
       </Link>
+
+      <Link
+        style={{
+          width: "100%",
+          backgroundColor: "pink",
+          padding: 10,
+          marginBottom: 10,
+          marginTop: 10,
+        }}
+        href="/local-storage"
+      >
+        <Text>Go to local storage</Text>
+      </Link>
     </View>
   );
 }
